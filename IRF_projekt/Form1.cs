@@ -24,5 +24,13 @@ namespace IRF_projekt
             panel1.Controls.Add(userControl1);
             userControl1.Dock = DockStyle.Fill;
         }
+
+        private void Home_button_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            UserControl2 userControl2 = new UserControl2();
+            panel1.Controls.Add(userControl2);
+            userControl2.Dock = DockStyle.Fill;
+        }
     }
 }

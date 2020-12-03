@@ -52,6 +52,7 @@
             this.home_button.Text = "Home";
             this.home_button.UseCompatibleTextRendering = true;
             this.home_button.UseVisualStyleBackColor = true;
+            this.home_button.Click += new System.EventHandler(this.Home_button_Click);
             // 
             // Adatok
             // 
