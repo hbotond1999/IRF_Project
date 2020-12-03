@@ -17,7 +17,7 @@ namespace IRF_projekt
         {
             InitializeComponent();
             Karácsonyfa();
-
+            
         }
 
         private void Karácsonyfa()
@@ -27,7 +27,7 @@ namespace IRF_projekt
                 for (int j = 0; j <= i; j++)
                 {
                     Karácsonyfa k = new Karácsonyfa();
-                    k.Left=50*j+ Width / 2 - i * 50 / 2;
+                    k.Left=50*j+ Width/2  - i * 50 / 2;
                     k.Top = 50 * i;
                     Controls.Add(k);
                     
@@ -36,14 +36,14 @@ namespace IRF_projekt
             }
 
             Fatörzs f = new Fatörzs();
-            f.Left= 50 *1  + Width / 2 -  1* 50 /2;
+            f.Left= 50 *1  + Width/2 -  1* 50 /2;
             f.Top = 50 * 8;
             Controls.Add(f);
             Fatörzs f1 = new Fatörzs();
-            f1.Left = 50 * -1 + Width / 2 - -1 * 50 / 2;
+            f1.Left = 50 * -1 + Width/2 - -1 * 50 / 2;
             f1.Top= 50 * 8;
             Controls.Add(f1);
-
+            
         }
     }
 }
