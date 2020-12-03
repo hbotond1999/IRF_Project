@@ -61,6 +61,7 @@
             this.Adatok.TabIndex = 2;
             this.Adatok.Text = "Adatok";
             this.Adatok.UseVisualStyleBackColor = true;
+            this.Adatok.Click += new System.EventHandler(this.Adatok_Click);
             // 
             // Form1
             // 

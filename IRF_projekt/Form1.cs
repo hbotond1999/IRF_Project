@@ -16,5 +16,13 @@ namespace IRF_projekt
         {
             InitializeComponent();
         }
+
+        private void Adatok_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            UserControl1 userControl1 = new UserControl1();
+            panel1.Controls.Add(userControl1);
+            userControl1.Dock = DockStyle.Fill;
+        }
     }
 }
