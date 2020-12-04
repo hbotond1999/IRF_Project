@@ -10,12 +10,13 @@ namespace IRF_projekt
 {
     public partial class UserControl1 : UserControl
     {
-        //private List<Webshop> webshops = new List<Webshop>();
-        BindingList<Webshop> webshops = new BindingList<Webshop>();
+        private List<Webshop> webshops = new List<Webshop>();
+        //BindingList<Webshop> webshops = new BindingList<Webshop>();
         public UserControl1()
         {
             InitializeComponent();
             Beolvasás();
+            dataGridView1.DataSource = webshops;
             
         }
 

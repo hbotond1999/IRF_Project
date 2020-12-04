@@ -32,5 +32,7 @@ namespace IRF_projekt
             panel1.Controls.Add(userControl2);
             userControl2.Dock = DockStyle.Fill;
         }
+
+
     }
 }
