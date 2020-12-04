@@ -32,9 +32,9 @@ namespace IRF_projekt
                     {
                         w.Rendeles_Id = Convert.ToInt32(sor[0]);
                     }
-                    catch (Exception)
+                    catch (Exception e)
                     {
-                        MessageBox.Show("Rendeles_Id beolvasása nem sikerült");
+                        MessageBox.Show(e.Message);
                         return;
                     }
 
@@ -45,10 +45,10 @@ namespace IRF_projekt
                     {
                         w.Szul_Datum = Convert.ToDateTime(sor[4]);
                     }
-                    catch (Exception)
+                    catch (Exception e)
                     {
 
-                        MessageBox.Show("Szul_Datum beolvasása nem sikerült");
+                        MessageBox.Show(e.Message);
                         return;
                     }
                     w.Telefon = sor[5];
@@ -57,10 +57,10 @@ namespace IRF_projekt
                     {
                         w.Rend_Ideje = Convert.ToDateTime(sor[7]);
                     }
-                    catch (Exception)
+                    catch (Exception e)
                     {
 
-                        MessageBox.Show("Rend_Ideje beolvasása nem sikerült");
+                        MessageBox.Show(e.Message);
                         return;
                     }
                     w.Rendelt_Termek = sor[8];
@@ -68,11 +68,31 @@ namespace IRF_projekt
                     {
                         w.Mennyiseg = Convert.ToInt32(sor[9]);
                     }
-                    catch (Exception)
+                    catch (Exception e)
                     {
 
-                        MessageBox.Show("Mennyiseg beolvasása nem sikerült");
+                        MessageBox.Show(e.Message);
                         return;
+                    }
+                    try
+                    {
+                        w.egysegar = Convert.ToDecimal(sor[10]);
+                    }
+                    catch (Exception e)
+                    {
+
+                        MessageBox.Show(e.Message);
+                    }
+
+                    try
+                    {
+                        w.Összesen = Convert.ToDecimal(sor[11]);
+
+                    }
+                    catch (Exception e)
+                    {
+
+                        MessageBox.Show(e.Message);
                     }
 
                     webshops.Add(w);

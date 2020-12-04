@@ -18,5 +18,7 @@ namespace IRF_projekt
         public DateTime Rend_Ideje { get; set; }
         public string Rendelt_Termek { get; set; }
         public int Mennyiseg { get; set; }
+        public decimal egysegar { get; set; }
+        public decimal Összesen { get; set; }
     }
 }
