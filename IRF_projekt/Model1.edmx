@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WebshopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nev" Type="nvarchar" MaxLength="50" />
+          <Property Name="E-mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Szuletesi datum" Type="datetime2" Precision="7" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cim" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rendeles ideje" Type="datetime2" Precision="7" />
+          <Property Name="Mennyiseg" Type="int" />
+          <Property Name="Egysegar" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Összesen" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Rendelt termek" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="WebshopModelStoreContainer">
+          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WebshopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="E_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Szuletesi_datum" Type="DateTime" Precision="7" />
+          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rendeles_ideje" Type="DateTime" Precision="7" />
+          <Property Name="Mennyiseg" Type="Int32" />
+          <Property Name="Egysegar" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Összesen" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Rendelt_termek" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="WebshopEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tables" EntityType="Self.Table" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WebshopModelStoreContainer" CdmEntityContainer="WebshopEntities">
+          <EntitySetMapping Name="Tables">
+            <EntityTypeMapping TypeName="WebshopModel.Table">
+              <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="Rendelt_termek" ColumnName="Rendelt termek" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Nev" ColumnName="Nev" />
+                <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+                <ScalarProperty Name="Szuletesi_datum" ColumnName="Szuletesi datum" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Cim" ColumnName="Cim" />
+                <ScalarProperty Name="Rendeles_ideje" ColumnName="Rendeles ideje" />
+                <ScalarProperty Name="Mennyiseg" ColumnName="Mennyiseg" />
+                <ScalarProperty Name="Egysegar" ColumnName="Egysegar" />
+                <ScalarProperty Name="Összesen" ColumnName="Összesen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

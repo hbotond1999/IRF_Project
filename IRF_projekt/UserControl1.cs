@@ -10,13 +10,17 @@ namespace IRF_projekt
 {
     public partial class UserControl1 : UserControl
     {
+        WebshopEntities context = new WebshopEntities();
         private List<Webshop> webshops = new List<Webshop>();
         //BindingList<Webshop> webshops = new BindingList<Webshop>();
         public UserControl1()
         {
             InitializeComponent();
-            Beolvasás();
-            dataGridView1.DataSource = webshops;
+           
+            dataGridView1.DataSource = (from x in context.Tables
+                                       select x).ToList();
+
+            
             
         }
 
@@ -114,21 +118,21 @@ namespace IRF_projekt
 
             if (ú.ShowDialog() == DialogResult.OK)
             {
-                Webshop w = new Webshop();
-                w.Rendeles_Id = (from x in webshops
-                                 select x.Rendeles_Id).Max() + 1;
-                w.Login = ú.login.Text;
-                w.Nev = ú.nev.Text;
-                w.email = ú.email.Text;
-                w.Szul_Datum = ú.dateTimePicker1.Value;
-                w.Telefon = ú.Telefonszam.Text;
-                w.Cim = ú.cim.Text;
-                w.Rend_Ideje = ú.dateTimePicker2.Value;
-                w.Rendelt_Termek = ú.comboBox1.Text;
+                Table t = new Table();
+                
+                t.Login = ú.login.Text;
+                t.Nev = ú.nev.Text;
+                t.E_mail = ú.email.Text;
+                t.Szuletesi_datum = ú.dateTimePicker1.Value;
+                t.Telefon = ú.Telefonszam.Text;
+                t.Cim = ú.cim.Text;
+                t.Rendeles_ideje = ú.dateTimePicker2.Value;
+                 t.Rendelt_termek= ú.comboBox1.Text;
+                
 
                 try
                 {
-                    w.Mennyiseg = Convert.ToInt32(ú.rendmenny.Text);
+                    t.Mennyiseg = Convert.ToInt32(ú.rendmenny.Text);
                 }
                 catch (Exception)
                 {
@@ -139,7 +143,7 @@ namespace IRF_projekt
 
                 try
                 {
-                    w.egysegar = Convert.ToDecimal(ú.egysegar.Text);
+                    t.Egysegar = Convert.ToDecimal(ú.egysegar.Text);
                 }
                 catch (Exception)
                 {
@@ -150,7 +154,7 @@ namespace IRF_projekt
 
                 try
                 {
-                    w.Összesen = Convert.ToDecimal(ú.egysegar.Text) * Convert.ToDecimal(ú.rendmenny.Text);
+                    t.Összesen = Convert.ToDecimal(ú.egysegar.Text) * Convert.ToDecimal(ú.rendmenny.Text);
                 }
                 catch (Exception k)
                 {
@@ -159,8 +163,9 @@ namespace IRF_projekt
                     return;
 
                 }
-                webshops.Add(w);
-                dataGridView1.DataSource = (from x in webshops select x).ToList();
+                context.Tables.Add(t);
+                context.SaveChanges();
+                dataGridView1.DataSource = (from x in context.Tables select x).ToList();
             }
         }
     }
