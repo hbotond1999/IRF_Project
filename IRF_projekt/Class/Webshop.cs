@@ -8,13 +8,13 @@ namespace IRF_projekt
         public string Login { get; set; }
         public string Nev { get; set; }
         public string email { get; set; }
-        public DateTime Szul_Datum { get; set; }
+        public DateTime? Szul_Datum { get; set; }
         public string Telefon { get; set; }
         public string Cim { get; set; }
-        public DateTime Rend_Ideje { get; set; }
+        public DateTime? Rend_Ideje { get; set; }
         public string Rendelt_Termek { get; set; }
-        public int Mennyiseg { get; set; }
-        public decimal egysegar { get; set; }
-        public decimal Összesen { get; set; }
+        public int? Mennyiseg { get; set; }
+        public decimal? egysegar { get; set; }
+        public decimal? Összesen { get; set; }
     }
 }

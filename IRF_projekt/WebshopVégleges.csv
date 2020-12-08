@@ -1,18 +1,18 @@
 ﻿Rendeles_Id;Login;Nev;E-mail;Szul_datum;Telefon;Cim;Rend_ideje;Rendelt termek;Mennyiseg;Egysegar;Összesen
-1;Magön;Magyar Ödön;magyar.ödön@hotmail.hu;2000.02.06;+36-43-436-9137;5137 Jászkisér, Rákóczi utca 67.;2020.11.05;Bicikli;1;20000;20000
-2;Debma;Debreceni Alma;debreceni.alma@sulinet.hu;1994.10.03;+36-45-932-6727;7100 Szekszárd, Kossuth utca 77.;2020.11.06;Számítógép;2;100000;200000
-3;Péctó;Péchy Renátó;péchy.renátó@yahoo.com;1993.05.19;+36-85-251-3789;5200 Törökszentmiklós, Deák Ferenc út 5.;2020.11.07;Számítógép;1;100000;100000
-4;Tótia;Tóth Szidónia;tóth.szidónia@outlook.com;1992.04.03;+36-53-270-1908;5537 Zsadány, Fő út 18.;2020.11.08;Játékautó;5;1000;5000
-5;Hajön;Hajdu Ödön;hajdu.ödön@sulinet.hu;1999.07.26;+36-46-851-9439;6080 Szabadszállás, Bécsi utca 82.;2020.11.09;Játékautó;3;1000;3000
-6;Nagrd;Nagy Szilárd;nagy.szilárd@gmail.com;1995.02.14;+36-64-981-9319;9023 Győr, Arany János utca 1.;2020.11.10;Labda;2;2000;4000
-7;Kovön;Kovács Ödön;kovács.ödön@outlook.com;1995.04.11;+36-49-312-3198;1173 Budapest, Jászai tér 21.;2020.11.11;Labda;1;2000;2000
-8;Hajma;Hajdu Alma;hajdu.alma@t-online.hu;1990.12.26;+36-12-601-1013;5931 Nagyszénás, Árpád utca 23.;2020.11.12;Könyv;2;5000;10000
-9;Nagul;Nagy Ubul;nagy.ubul@yahoo.com;1994.05.11;+36-53-838-4503;5878 Budapest fő út 6;2020.11.13;Könyv;2;5000;10000
-10;Magid;Magyar Dávid;magyar.dávid@hotmail.hu;1999.01.25;+36-52-307-7874;5138 Budapest, Rákóczi utca 67.;2020.11.14;Könyv;3;5000;15000
-11;Hajön;Hajdu Ödön;hajdu.ödön@hotmail.hu;1999.07.18;+36-87-366-6919;7101 Budapest, Kossuth utca 77.;2020.11.15;Laptop;1;150000;150000
-12;Pécgy;Péchy György;péchy.györgy@gmail.com;1990.05.27;+36-72-554-4752;5201 Budapest, Deák Ferenc út 5.;2020.11.16;Lámpa;5;10000;50000
-13;Hajid;Hajdu Dávid;hajdu.dávid@yahoo.com;1999.12.22;+36-78-933-6873;5538 Budapest, Fő út 18.;2020.11.17;Bicikli;4;20000;80000
-14;Lángy;Láncz György;láncz.györgy@sulinet.hu;1997.06.25;+36-84-571-9986;5201 Budapest, Deák Ferenc út 14.;2020.11.18;Bicikli;2;20000;40000
-15;Magön;Magyar Ödön;magyar.ödön@hotmail.hu;2000.02.06;+36-43-436-9137;5137 Jászkisér, Rákóczi utca 67.;2020.11.19;Könyv;6;5000;30000
-16;Nagrd;Nagy Szilárd;nagy.szilárd@gmail.com;1995.02.14;+36-64-981-9319;9023 Győr, Arany János utca 1.;2020.11.20;Bicikli;1;20000;20000
-17;Hajma;Hajdu Alma;hajdu.alma@t-online.hu;1990.12.26;+36-12-601-1013;5931 Nagyszénás, Árpád utca 23.;2020.11.21;Lámpa;6;10000;60000
+1;Magön;Magyar Ödön;magyar.ödön@hotmail.hu;2000. február 6., vasárnap;+36-43-436-9137;5137 Jászkisér, Rákóczi utca 67.;2020. november 5., csütörtök;Bicikli;1;20000;20000
+2;Debma;Debreceni Alma;debreceni.alma@sulinet.hu;1994. október 3., hétfő;+36-45-932-6727;7100 Szekszárd, Kossuth utca 77.;2020. november 6., péntek;Számítógép;2;100000;200000
+3;Péctó;Péchy Renátó;péchy.renátó@yahoo.com;1993. május 19., szerda;+36-85-251-3789;5200 Törökszentmiklós, Deák Ferenc út 5.;2020. november 7., szombat;Számítógép;1;100000;100000
+4;Tótia;Tóth Szidónia;tóth.szidónia@outlook.com;1992. április 3., péntek;+36-53-270-1908;5537 Zsadány, Fő út 18.;2020. november 8., vasárnap;Játékautó;5;1000;5000
+5;Hajön;Hajdu Ödön;hajdu.ödön@sulinet.hu;1999. július 26., hétfő;+36-46-851-9439;6080 Szabadszállás, Bécsi utca 82.;2020. november 9., hétfő;Játékautó;3;1000;3000
+6;Nagrd;Nagy Szilárd;nagy.szilárd@gmail.com;1995. február 14., kedd;+36-64-981-9319;9023 Győr, Arany János utca 1.;2020. november 10., kedd;Labda;2;2000;4000
+7;Kovön;Kovács Ödön;kovács.ödön@outlook.com;1995. április 11., kedd;+36-49-312-3198;1173 Budapest, Jászai tér 21.;2020. november 11., szerda;Labda;1;2000;2000
+8;Hajma;Hajdu Alma;hajdu.alma@t-online.hu;1990. december 26., szerda;+36-12-601-1013;5931 Nagyszénás, Árpád utca 23.;2020. november 12., csütörtök;Könyv;2;5000;10000
+9;Nagul;Nagy Ubul;nagy.ubul@yahoo.com;1994. május 11., szerda;+36-53-838-4503;5878 Budapest fő út 6;2020. november 13., péntek;Könyv;2;5000;10000
+10;Magid;Magyar Dávid;magyar.dávid@hotmail.hu;1999. január 25., hétfő;+36-52-307-7874;5138 Budapest, Rákóczi utca 67.;2020. november 14., szombat;Könyv;3;5000;15000
+11;Hajön;Hajdu Ödön;hajdu.ödön@hotmail.hu;1999. július 18., vasárnap;+36-87-366-6919;7101 Budapest, Kossuth utca 77.;2020. november 15., vasárnap;Laptop;1;150000;150000
+12;Pécgy;Péchy György;péchy.györgy@gmail.com;1990. május 27., vasárnap;+36-72-554-4752;5201 Budapest, Deák Ferenc út 5.;2020. november 16., hétfő;Lámpa;5;10000;50000
+13;Hajid;Hajdu Dávid;hajdu.dávid@yahoo.com;1999. december 22., szerda;+36-78-933-6873;5538 Budapest, Fő út 18.;2020. november 17., kedd;Bicikli;4;20000;80000
+14;Lángy;Láncz György;láncz.györgy@sulinet.hu;1997. június 25., szerda;+36-84-571-9986;5201 Budapest, Deák Ferenc út 14.;2020. november 18., szerda;Bicikli;2;20000;40000
+15;Magön;Magyar Ödön;magyar.ödön@hotmail.hu;2000. február 6., vasárnap;+36-43-436-9137;5137 Jászkisér, Rákóczi utca 67.;2020. november 19., csütörtök;Könyv;6;5000;30000
+16;Nagrd;Nagy Szilárd;nagy.szilárd@gmail.com;1995. február 14., kedd;+36-64-981-9319;9023 Győr, Arany János utca 1.;2020. november 20., péntek;Bicikli;1;20000;20000
+17;Hajma;Hajdu Alma;hajdu.alma@t-online.hu;1990. december 26., szerda;+36-12-601-1013;5931 Nagyszénás, Árpád utca 23.;2020. november 21., szombat;Lámpa;6;10000;60000
