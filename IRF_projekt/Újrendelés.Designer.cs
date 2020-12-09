@@ -341,7 +341,6 @@
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
-       private Class.MennyisegButton kedvezmenyButton1;
         public Class.MennyisegButton mennyisegButton1;
     }
 }
