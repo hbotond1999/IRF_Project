@@ -186,11 +186,12 @@
             "Laptop",
             "Labda",
             "Lámpa",
-            "Játéautó"});
+            "Játékautó"});
             this.comboBox1.Location = new System.Drawing.Point(120, 343);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 20;
+            this.comboBox1.Text = "Lámpa";
             // 
             // label7
             // 
