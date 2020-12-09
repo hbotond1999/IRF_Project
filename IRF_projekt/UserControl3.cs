@@ -83,17 +83,20 @@ namespace IRF_projekt
                     {
 
                         MessageBox.Show(e.Message);
+                        return;
                     }
 
                     try
                     {
                         w.Összesen = Convert.ToDecimal(sor[11]);
+                      
 
                     }
                     catch (Exception e)
                     {
 
                         MessageBox.Show(e.Message);
+                        return;
                     }
 
                     webshops.Add(w);
@@ -311,7 +314,17 @@ namespace IRF_projekt
                     }
 
                     context.Tables.Add(t);
-                    context.SaveChanges();
+                    try
+                    {
+                        context.SaveChanges();
+                    }
+                    catch (Exception f)
+                    {
+
+                        MessageBox.Show(f.Message);
+                        return;
+                    }
+                    
 
                     
 
@@ -344,6 +357,7 @@ namespace IRF_projekt
             catch (Exception)
             {
                 MessageBox.Show("Kérem jó fájlt adjon meg (a projektben található a WebshopVégleges.csv)");
+                return;
             }
             
 
