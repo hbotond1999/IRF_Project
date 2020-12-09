@@ -14,14 +14,14 @@ namespace IRF_projekt
         public UserControl3()
         {
             InitializeComponent();
-            Beolvasás();
+            
             
         }
 
         private void Beolvasás()
         {
 
-            using (StreamReader sr = new StreamReader("WebshopVégleges.csv", Encoding.UTF8))
+            using (StreamReader sr = new StreamReader(textBox1.Text, Encoding.UTF8))
             {
                 sr.ReadLine();
                 while (!sr.EndOfStream)
@@ -243,7 +243,7 @@ namespace IRF_projekt
             }
             */
 
-            using (StreamReader sr = new StreamReader("WebshopVégleges.csv", Encoding.UTF8))
+            using (StreamReader sr = new StreamReader(textBox1.Text, Encoding.UTF8))
             {
                 sr.ReadLine();
                 while (!sr.EndOfStream)
@@ -326,12 +326,27 @@ namespace IRF_projekt
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog op = new OpenFileDialog();
+            
 
-            if (true)
+            OpenFileDialog open = new OpenFileDialog();
+            if (open.ShowDialog() == DialogResult.OK)
             {
-
+                textBox1.Text = open.FileName;
             }
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                 Beolvasás();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Kérem jó fájlt adjon meg (a projektben található a WebshopVégleges.csv)");
+            }
+            
+
         }
     }
 }
