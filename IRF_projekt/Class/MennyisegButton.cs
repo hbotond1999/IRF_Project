@@ -27,15 +27,14 @@ namespace IRF_projekt.Class
         public MennyisegButton()
         {
 
-            Height = 30;
-            Width = 30;
+            
             BackColor = Color.LightGreen;
             Value = 0;
 
-            MouseDown += KedvezmenyButton_MouseDown;
+            MouseDown += MennyisegButton_MouseDown;
         }
 
-        private void KedvezmenyButton_MouseDown(object sender, MouseEventArgs e)
+        private void MennyisegButton_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
                 Value++;
