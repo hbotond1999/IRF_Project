@@ -356,7 +356,7 @@ namespace IRF_projekt
             }
             catch (Exception)
             {
-                MessageBox.Show("Kérem jó fájlt adjon meg (a projektben található a WebshopVégleges.csv)");
+                MessageBox.Show("Kérem a projektben található a WebshopVégleges.csv-t válasza ki a browse gomb segítségével.");
                 return;
             }
             
