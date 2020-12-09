@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IRF_projekt
@@ -15,6 +8,62 @@ namespace IRF_projekt
         public Újrendelés()
         {
             InitializeComponent();
+            Számolás();
+        }
+
+        private void Rendmenny_TextChanged(object sender, EventArgs e)
+        {
+            Számolás();
+        }
+
+
+        private void Számolás()
+        {
+            if (rendmenny.Text == "" || egysegar.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                decimal a;
+                decimal x;
+                try
+                {
+                    a = Convert.ToDecimal(rendmenny.Text);
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Kérem számot adjon meg a rendelés mennyiségeként");
+                    return;
+                }
+
+                try
+                {
+                    x = Convert.ToDecimal(egysegar.Text);
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Kérem számot adjon meg egységárként");
+                    return;
+                }
+
+                try
+                {
+                    label10.Text = (a * x).ToString();
+                }
+                catch (Exception f)
+                {
+
+                    MessageBox.Show(f.Message);
+                    return;
+                }
+
+
+
+            }
+
         }
     }
 }
