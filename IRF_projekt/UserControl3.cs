@@ -245,93 +245,103 @@ namespace IRF_projekt
                 MessageBox.Show(c.Message);
             }
             */
-
-            using (StreamReader sr = new StreamReader(textBox1.Text, Encoding.UTF8))
+            try
             {
-                sr.ReadLine();
-                while (!sr.EndOfStream)
+                using (StreamReader sr = new StreamReader(textBox1.Text, Encoding.UTF8))
                 {
-                    string[] sor = sr.ReadLine().Split(';');
-
-                    Table t = new Table();
-                   
-
-                    t.Login = sor[1];
-                    t.Nev = sor[2];
-                    t.E_mail = sor[3];
-                    try
+                    sr.ReadLine();
+                    while (!sr.EndOfStream)
                     {
-                        t.Szuletesi_datum = Convert.ToDateTime(sor[4]);
-                    }
-                    catch (Exception x)
-                    {
+                        string[] sor = sr.ReadLine().Split(';');
 
-                        MessageBox.Show(x.Message);
-                        return;
-                    }
-                    t.Telefon = sor[5];
-                    t.Cim = sor[6];
-                    try
-                    {
-                        t.Rendeles_ideje = Convert.ToDateTime(sor[7]);
-                    }
-                    catch (Exception x)
-                    {
+                        Table t = new Table();
 
-                        MessageBox.Show(x.Message);
-                        return;
-                    }
-                    t.Rendelt_termek = sor[8];
-                    try
-                    {
-                        t.Mennyiseg = Convert.ToInt32(sor[9]);
-                    }
-                    catch (Exception x)
-                    {
 
-                        MessageBox.Show(x.Message);
-                        return;
+                        t.Login = sor[1];
+                        t.Nev = sor[2];
+                        t.E_mail = sor[3];
+                        try
+                        {
+                            t.Szuletesi_datum = Convert.ToDateTime(sor[4]);
+                        }
+                        catch (Exception x)
+                        {
+
+                            MessageBox.Show(x.Message);
+                            return;
+                        }
+                        t.Telefon = sor[5];
+                        t.Cim = sor[6];
+                        try
+                        {
+                            t.Rendeles_ideje = Convert.ToDateTime(sor[7]);
+                        }
+                        catch (Exception x)
+                        {
+
+                            MessageBox.Show(x.Message);
+                            return;
+                        }
+                        t.Rendelt_termek = sor[8];
+                        try
+                        {
+                            t.Mennyiseg = Convert.ToInt32(sor[9]);
+                        }
+                        catch (Exception x)
+                        {
+
+                            MessageBox.Show(x.Message);
+                            return;
+                        }
+                        try
+                        {
+                            t.Egysegar = Convert.ToDecimal(sor[10]);
+                        }
+                        catch (Exception x)
+                        {
+
+                            MessageBox.Show(x.Message);
+                        }
+
+                        try
+                        {
+                            t.Összesen = Convert.ToDecimal(sor[11]);
+
+                        }
+                        catch (Exception x)
+                        {
+
+                            MessageBox.Show(x.Message);
+                        }
+
+                        context.Tables.Add(t);
+                        try
+                        {
+                            context.SaveChanges();
+                        }
+                        catch (Exception f)
+                        {
+
+                            MessageBox.Show(f.Message);
+                            return;
+                        }
+
+
+
+
                     }
-                    try
-                    {
-                        t.Egysegar = Convert.ToDecimal(sor[10]);
-                    }
-                    catch (Exception x)
-                    {
-
-                        MessageBox.Show(x.Message);
-                    }
-
-                    try
-                    {
-                        t.Összesen = Convert.ToDecimal(sor[11]);
-
-                    }
-                    catch (Exception x)
-                    {
-
-                        MessageBox.Show(x.Message);
-                    }
-
-                    context.Tables.Add(t);
-                    try
-                    {
-                        context.SaveChanges();
-                    }
-                    catch (Exception f)
-                    {
-
-                        MessageBox.Show(f.Message);
-                        return;
-                    }
-                    
-
-                    
-
                 }
-            }
 
-            MessageBox.Show("Sikeres mentés");
+                MessageBox.Show("Sikeres mentés");
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Kérem előtte olvasson be egy fájlt");
+                return;
+            }
+            
 
            
 
