@@ -323,5 +323,15 @@ namespace IRF_projekt
            
 
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+
+            if (true)
+            {
+
+            }
+        }
     }
 }
