@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IRF_projekt.Class;
+using System;
 using System.Windows.Forms;
 
 namespace IRF_projekt
@@ -9,6 +10,8 @@ namespace IRF_projekt
         {
             InitializeComponent();
             Számolás();
+            
+
         }
 
         private void Rendmenny_TextChanged(object sender, EventArgs e)
@@ -19,7 +22,7 @@ namespace IRF_projekt
 
         private void Számolás()
         {
-            if (rendmenny.Text == "" || egysegar.Text == "")
+            if (mennyisegButton1.Text == "" || egysegar.Text == "")
             {
                 return;
             }
@@ -29,12 +32,12 @@ namespace IRF_projekt
                 decimal x;
                 try
                 {
-                    a = Convert.ToDecimal(rendmenny.Text);
+                    a = Convert.ToDecimal(mennyisegButton1.Text);
                 }
-                catch (Exception)
+                catch (Exception f)
                 {
 
-                    MessageBox.Show("Kérem számot adjon meg a rendelés mennyiségeként");
+                    MessageBox.Show(f.Message);
                     return;
                 }
 
@@ -65,5 +68,7 @@ namespace IRF_projekt
             }
 
         }
+
+        
     }
 }

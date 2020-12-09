@@ -34,7 +34,6 @@
             this.email = new System.Windows.Forms.TextBox();
             this.Telefonszam = new System.Windows.Forms.TextBox();
             this.cim = new System.Windows.Forms.TextBox();
-            this.rendmenny = new System.Windows.Forms.TextBox();
             this.egysegar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.mennyisegButton1 = new IRF_projekt.Class.MennyisegButton();
             this.SuspendLayout();
             // 
             // login
@@ -98,15 +98,6 @@
             this.cim.Name = "cim";
             this.cim.Size = new System.Drawing.Size(100, 20);
             this.cim.TabIndex = 6;
-            // 
-            // rendmenny
-            // 
-            this.rendmenny.Location = new System.Drawing.Point(120, 390);
-            this.rendmenny.Name = "rendmenny";
-            this.rendmenny.Size = new System.Drawing.Size(100, 20);
-            this.rendmenny.TabIndex = 9;
-            this.rendmenny.Text = "0";
-            this.rendmenny.TextChanged += new System.EventHandler(this.Rendmenny_TextChanged);
             // 
             // egysegar
             // 
@@ -231,7 +222,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 471);
+            this.label9.Location = new System.Drawing.Point(10, 483);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 13);
             this.label9.TabIndex = 24;
@@ -248,7 +239,7 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(72, 504);
+            this.button1.Location = new System.Drawing.Point(61, 573);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 35);
             this.button1.TabIndex = 26;
@@ -258,7 +249,7 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(190, 504);
+            this.button2.Location = new System.Drawing.Point(172, 573);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 35);
             this.button2.TabIndex = 27;
@@ -268,17 +259,30 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(117, 471);
+            this.label10.Location = new System.Drawing.Point(117, 484);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 13);
             this.label10.TabIndex = 28;
             this.label10.Text = "label10";
             // 
+            // mennyisegButton1
+            // 
+            this.mennyisegButton1.BackColor = System.Drawing.Color.LightGreen;
+            this.mennyisegButton1.Location = new System.Drawing.Point(120, 388);
+            this.mennyisegButton1.Name = "mennyisegButton1";
+            this.mennyisegButton1.Size = new System.Drawing.Size(107, 31);
+            this.mennyisegButton1.TabIndex = 29;
+            this.mennyisegButton1.Text = "0";
+            this.mennyisegButton1.UseVisualStyleBackColor = false;
+            this.mennyisegButton1.Value = 0;
+            this.mennyisegButton1.TextChanged += new System.EventHandler(this.Rendmenny_TextChanged);
+            // 
             // Újrendelés
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 551);
+            this.ClientSize = new System.Drawing.Size(382, 636);
+            this.Controls.Add(this.mennyisegButton1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -297,7 +301,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.egysegar);
-            this.Controls.Add(this.rendmenny);
             this.Controls.Add(this.cim);
             this.Controls.Add(this.Telefonszam);
             this.Controls.Add(this.email);
@@ -330,7 +333,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label Összesen;
         public System.Windows.Forms.TextBox cim;
-        public System.Windows.Forms.TextBox rendmenny;
         public System.Windows.Forms.TextBox egysegar;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         public System.Windows.Forms.DateTimePicker dateTimePicker2;
@@ -338,5 +340,7 @@
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
+       private Class.MennyisegButton kedvezmenyButton1;
+        public Class.MennyisegButton mennyisegButton1;
     }
 }

@@ -76,6 +76,9 @@
     <Compile Include="Class\Karácsonyfa.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Class\MennyisegButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

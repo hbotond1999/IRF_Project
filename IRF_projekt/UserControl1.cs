@@ -46,7 +46,7 @@ namespace IRF_projekt
 
                 try
                 {
-                    t.Mennyiseg = Convert.ToInt32(ú.rendmenny.Text);
+                    t.Mennyiseg = Convert.ToInt32(ú.mennyisegButton1.Text);
                 }
                 catch (Exception)
                 {
@@ -68,7 +68,7 @@ namespace IRF_projekt
 
                 try
                 {
-                    t.Összesen = Convert.ToDecimal(ú.egysegar.Text) * Convert.ToDecimal(ú.rendmenny.Text);
+                    t.Összesen = Convert.ToDecimal(ú.egysegar.Text) * Convert.ToDecimal(ú.mennyisegButton1.Text);
                 }
                 catch (Exception k)
                 {
