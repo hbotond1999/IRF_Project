@@ -10,6 +10,7 @@ namespace IRF_projekt
         public UserControl4()
         {
             InitializeComponent();
+            termekek();
 
         }
 
@@ -25,8 +26,11 @@ namespace IRF_projekt
 
                      };
 
-            
+            eladottmennyisegBindingSource.DataSource = er.ToList();
+            chart1.DataBind();
 
+            label2.Text = ((from x in context.Tables
+                           select x.Mennyiseg).Sum()).ToString();
         }
     }
 }
