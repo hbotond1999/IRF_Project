@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Bevétel.cs" />
     <Compile Include="Class\Eladott_mennyiseg.cs" />
     <Compile Include="Class\Fatörzs.cs">
       <SubType>Component</SubType>
@@ -134,6 +135,12 @@
     <Compile Include="UserControl4.Designer.cs">
       <DependentUpon>UserControl4.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl5.Designer.cs">
+      <DependentUpon>UserControl5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Újrendelés.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +172,9 @@
     <EmbeddedResource Include="UserControl4.resx">
       <DependentUpon>UserControl4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl5.resx">
+      <DependentUpon>UserControl5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Újrendelés.resx">
       <DependentUpon>Újrendelés.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +186,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\IRF_projekt.Class.Bevétel.datasource" />
     <None Include="Properties\DataSources\IRF_projekt.Class.Eladott_mennyiseg.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

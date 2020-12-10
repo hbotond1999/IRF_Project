@@ -54,5 +54,13 @@ namespace IRF_projekt
             userControl4.Dock = DockStyle.Fill;
 
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            UserControl5 userControl5 = new UserControl5();
+            panel1.Controls.Add(userControl5);
+            userControl5.Dock = DockStyle.Fill;
+        }
     }
 }

@@ -29,8 +29,8 @@ namespace IRF_projekt
             eladottmennyisegBindingSource.DataSource = er.ToList();
             chart1.DataBind();
 
-            label2.Text = ((from x in context.Tables
-                           select x.Mennyiseg).Sum()).ToString();
+            label2.Text = ((from x in er
+                           select x.Darab).Sum()).ToString();
         }
     }
 }
