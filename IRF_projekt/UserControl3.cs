@@ -14,8 +14,8 @@ namespace IRF_projekt
         public UserControl3()
         {
             InitializeComponent();
-            
-            
+
+
         }
 
         private void Beolvasás()
@@ -89,7 +89,7 @@ namespace IRF_projekt
                     try
                     {
                         w.Összesen = Convert.ToDecimal(sor[11]);
-                      
+
 
                     }
                     catch (Exception e)
@@ -341,36 +341,34 @@ namespace IRF_projekt
                 MessageBox.Show("Kérem előtte olvasson be egy fájlt");
                 return;
             }
-            
 
-           
+
+
 
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            
+
 
             OpenFileDialog open = new OpenFileDialog();
             if (open.ShowDialog() == DialogResult.OK)
             {
                 textBox1.Text = open.FileName;
+
+                try
+                {
+                    Beolvasás();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Kérem a projektben található a WebshopVégleges.csv-t válasza ki a browse gomb segítségével.");
+                    return;
+                }
+
             }
         }
 
-        private void Button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                 Beolvasás();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Kérem a projektben található a WebshopVégleges.csv-t válasza ki a browse gomb segítségével.");
-                return;
-            }
-            
-
-        }
+        
     }
 }
