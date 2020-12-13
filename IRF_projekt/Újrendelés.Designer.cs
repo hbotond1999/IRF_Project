@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.login = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.nev = new System.Windows.Forms.TextBox();
@@ -52,7 +53,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.mennyisegButton1 = new IRF_projekt.Class.MennyisegButton();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // login
@@ -61,6 +64,8 @@
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(100, 20);
             this.login.TabIndex = 0;
+            this.login.Validating += new System.ComponentModel.CancelEventHandler(this.Login_Validating);
+            this.login.Validated += new System.EventHandler(this.Login_Validated);
             // 
             // label1
             // 
@@ -77,6 +82,8 @@
             this.nev.Name = "nev";
             this.nev.Size = new System.Drawing.Size(100, 20);
             this.nev.TabIndex = 2;
+            this.nev.Validating += new System.ComponentModel.CancelEventHandler(this.Nev_Validating);
+            this.nev.Validated += new System.EventHandler(this.Nev_Validated);
             // 
             // email
             // 
@@ -84,6 +91,8 @@
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(100, 20);
             this.email.TabIndex = 4;
+            this.email.Validating += new System.ComponentModel.CancelEventHandler(this.Email_Validating);
+            this.email.Validated += new System.EventHandler(this.Email_Validated);
             // 
             // Telefonszam
             // 
@@ -91,6 +100,8 @@
             this.Telefonszam.Name = "Telefonszam";
             this.Telefonszam.Size = new System.Drawing.Size(100, 20);
             this.Telefonszam.TabIndex = 5;
+            this.Telefonszam.Validating += new System.ComponentModel.CancelEventHandler(this.Telefonszam_Validating);
+            this.Telefonszam.Validated += new System.EventHandler(this.Telefonszam_Validated);
             // 
             // cim
             // 
@@ -98,6 +109,8 @@
             this.cim.Name = "cim";
             this.cim.Size = new System.Drawing.Size(100, 20);
             this.cim.TabIndex = 6;
+            this.cim.Validating += new System.ComponentModel.CancelEventHandler(this.Cim_Validating);
+            this.cim.Validated += new System.EventHandler(this.Cim_Validated);
             // 
             // egysegar
             // 
@@ -107,6 +120,7 @@
             this.egysegar.TabIndex = 10;
             this.egysegar.Text = "0";
             this.egysegar.TextChanged += new System.EventHandler(this.Rendmenny_TextChanged);
+            
             // 
             // label2
             // 
@@ -266,6 +280,10 @@
             this.label10.TabIndex = 28;
             this.label10.Text = "label10";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // mennyisegButton1
             // 
             this.mennyisegButton1.BackColor = System.Drawing.Color.LightGreen;
@@ -310,6 +328,7 @@
             this.Controls.Add(this.login);
             this.Name = "Újrendelés";
             this.Text = "Újrendelés";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,5 +361,6 @@
         public System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
         public Class.MennyisegButton mennyisegButton1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
