@@ -120,7 +120,6 @@
             this.egysegar.TabIndex = 10;
             this.egysegar.Text = "0";
             this.egysegar.TextChanged += new System.EventHandler(this.Rendmenny_TextChanged);
-            
             // 
             // label2
             // 
