@@ -33,16 +33,16 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.eladottmennyisegBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.termeknevDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.darabDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eladottmennyisegBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eladottmennyisegBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // chart1
@@ -72,6 +72,10 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
+            // eladottmennyisegBindingSource
+            // 
+            this.eladottmennyisegBindingSource.DataSource = typeof(IRF_projekt.Class.Eladott_mennyiseg);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -86,6 +90,18 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(247, 324);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // termeknevDataGridViewTextBoxColumn
+            // 
+            this.termeknevDataGridViewTextBoxColumn.DataPropertyName = "Termeknev";
+            this.termeknevDataGridViewTextBoxColumn.HeaderText = "Termeknev";
+            this.termeknevDataGridViewTextBoxColumn.Name = "termeknevDataGridViewTextBoxColumn";
+            // 
+            // darabDataGridViewTextBoxColumn
+            // 
+            this.darabDataGridViewTextBoxColumn.DataPropertyName = "Darab";
+            this.darabDataGridViewTextBoxColumn.HeaderText = "Darab";
+            this.darabDataGridViewTextBoxColumn.Name = "darabDataGridViewTextBoxColumn";
             // 
             // label1
             // 
@@ -103,27 +119,11 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(205, 389);
+            this.label2.Location = new System.Drawing.Point(226, 389);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
-            // 
-            // termeknevDataGridViewTextBoxColumn
-            // 
-            this.termeknevDataGridViewTextBoxColumn.DataPropertyName = "Termeknev";
-            this.termeknevDataGridViewTextBoxColumn.HeaderText = "Termeknev";
-            this.termeknevDataGridViewTextBoxColumn.Name = "termeknevDataGridViewTextBoxColumn";
-            // 
-            // darabDataGridViewTextBoxColumn
-            // 
-            this.darabDataGridViewTextBoxColumn.DataPropertyName = "Darab";
-            this.darabDataGridViewTextBoxColumn.HeaderText = "Darab";
-            this.darabDataGridViewTextBoxColumn.Name = "darabDataGridViewTextBoxColumn";
-            // 
-            // eladottmennyisegBindingSource
-            // 
-            this.eladottmennyisegBindingSource.DataSource = typeof(IRF_projekt.Class.Eladott_mennyiseg);
             // 
             // label3
             // 
@@ -147,8 +147,8 @@
             this.Name = "UserControl4";
             this.Size = new System.Drawing.Size(740, 447);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eladottmennyisegBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
